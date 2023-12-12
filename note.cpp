@@ -57,18 +57,25 @@ const int* note::getBirthDate() const {
 
     return birthDate;
 }
-
-void note::setFirstName(const std::string& first) {
+void note::noteShow() {
+    cout << "---------------------" << endl;
+    cout << "Имя: " << firstName << endl;
+    cout << "Фамилия: " << lastName << endl;
+    cout << "Телефон: " << phoneNumber << endl;
+    cout << "Дата рождения: " << birthDate[0] << '.' << birthDate[1] << '.' << birthDate[2] << endl;
+    cout << "---------------------" << endl;
+}
+void note::setFirstName(const string& first) {
 
     firstName = first;
 }
 
-void note::setLastName(const std::string& last) {
+void note::setLastName(const string& last) {
 
     lastName = last;
 }
 
-void note::setPhoneNumber(const std::string& phone) {
+void note::setPhoneNumber(const string& phone) {
     phoneNumber = phone;
 }
 

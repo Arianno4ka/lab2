@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 using namespace std;
 class note
 {
@@ -23,15 +26,15 @@ public:
     const string& getLastName() const;
     const string& getPhoneNumber() const;
     const int* getBirthDate() const;
-
+    void noteShow();
     void setFirstName(const string& first);
     void setLastName(const string& last);
     void setPhoneNumber(const string& phone);
     void setBirthDate(const int* birth);
 
     // ѕерегруженные операции вставки и извлечени€
-    friend ostream& operator<<(std::ostream& os, const note& note);
-    friend istream& operator>>(std::istream& is, note& note);
+    friend ostream& operator<<(ostream& os, const note& note);
+    friend istream& operator>>(istream& is, note& note);
 };
 
 
